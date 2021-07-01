@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.resultado.ResultadoFragment">
+    <ImageView
+        android:id="@+id/cerrar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/com_facebook_close"/>
+    <TextView
+        android:layout_marginTop="140dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#35B342"
+        android:textSize="25dp"
+        android:text="ERES INCREIBLE, LOGRASTE" />
+
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="45dp"
+        android:text="14/14" />
+
+    <TextView
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#35B342"
+        android:textSize="25dp"
+        android:text="ERES INCREIBLE, LOGRASTE" />
+
+
+</LinearLayout>
