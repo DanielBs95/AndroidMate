@@ -12,8 +12,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -22,11 +22,29 @@
         android:orientation="vertical">
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:text="Completa la expresión númerica"
+            android:textSize="17dp"
+
+
+            android:layout_gravity="center"
+
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+
+            />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="20dp"
+            android:layout_marginTop="20dp"
             android:paddingRight="20dp"
             android:orientation="vertical">
 
@@ -41,17 +59,6 @@
                 android:textColor="@color/black"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
-                android:text="Completa la expresión númerica"
-                android:textSize="17dp"
-                android:layout_gravity="center"
-                android:textColor="#849095"
-                />
-
-
 
 
 
@@ -60,9 +67,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#DA2222"
-                android:text="¿Nicolas, Valentina y Nina cuentan su propina en el recreo?"
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
+                android:text="¿Vanessa, Lucia y María cuentan su propina en el recreo?"
                 />
 
 
@@ -85,7 +95,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
-                        android:text="Nicolas"/>
+                        android:text="Vanessa"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -105,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
-                        android:text="Valentina"/>
+                        android:text="Lucia"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -125,7 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="25dp"
-                        android:text="Nina"/>
+                        android:text="María"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -141,9 +151,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#DA2222"
-                android:text="Ayudanos a ordenar las cantidades mayor a menor"
+
+                android:text="Ayudanos a ordenar las cantidades de mayor a menor"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
                 />
 
             <ImageView

@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
 
@@ -38,9 +38,13 @@
             android:layout_height="wrap_content"
             android:justificationMode="inter_word"
             android:text="Aprendiendo longitudes"
-            android:textSize="17dp"
+
+
+            android:textSize="20dp"
             android:layout_gravity="center"
-            android:textColor="#849095"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             />
 
 
@@ -49,8 +53,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="15dp"
             android:text="¿Qué lápiz es más largo?"
+
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#255CE6"
+            android:textStyle="bold"
             />
 
 
@@ -121,9 +129,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="25dp"
             android:layout_marginBottom="20dp"
             android:text="Marca la respuesta correcta."
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#255CE6"
+            android:textStyle="bold"
             />
 
         <LinearLayout

@@ -12,8 +12,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -48,7 +48,10 @@
                 android:text="Completa la expresión númerica"
                 android:textSize="17dp"
                 android:layout_gravity="center"
-                android:textColor="#849095"
+
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 />
 
 
@@ -58,18 +61,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#DA2222"
-                android:text="Piero tenía un billete de S/. 200 y compró una zapatilla en S/. 60 y un short en S/. 20."
+
+                android:text="Martín tenía 85 canicas y le regaló 5 canicas a su primo y 20 canicas a su hermano."
+
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
+
+
                 />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#DA2222"
-                android:text="¿Cuánto dinero le dieron de vuelto?"
+
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
+
+                android:text="¿Cuántas canicas le quedaron a Martín?"
                 />
 
 

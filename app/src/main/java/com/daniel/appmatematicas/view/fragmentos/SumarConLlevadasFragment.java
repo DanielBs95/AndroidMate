@@ -60,7 +60,7 @@ public class SumarConLlevadasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_sumar_con_llevadas, container, false);
+        View root = inflater.inflate(R.layout.fragment_sumar_con_llevadas_i, container, false);
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
         resultadoList = prefs.getString("modulo_2","");
@@ -175,7 +175,6 @@ public class SumarConLlevadasFragment extends Fragment {
             public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                 if(response.isSuccessful()) {
-                    showSnackBar(response.body().toString());
 
                     System.out.println("--------------------" );
                     System.out.println("---: " +  response.body().getNombre() );

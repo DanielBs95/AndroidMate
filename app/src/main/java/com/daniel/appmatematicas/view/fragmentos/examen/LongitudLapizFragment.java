@@ -80,7 +80,7 @@ public class LongitudLapizFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_longitud_lapiz, container, false);
+        View root = inflater.inflate(R.layout.fragment_longitud_lapiz_i, container, false);
         ImageView btnCerrar;
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
@@ -115,7 +115,7 @@ public class LongitudLapizFragment extends Fragment {
                         if(i.getPosicion().equalsIgnoreCase("18")){
                             txtPregunta = root.findViewById(R.id.pregunta);
                             preguntaPrincipal = i.getPreguntas_tema();
-                            txtPregunta.setText(preguntaPrincipal);
+                          //  txtPregunta.setText(preguntaPrincipal);
                         }
                         temaList.add(i);
                     }
@@ -185,10 +185,9 @@ public class LongitudLapizFragment extends Fragment {
         mTercero = root.findViewById(R.id.tercero);
 
 
-
-        mPrimero.setText("A");
-        mSegundo.setText("B");
-        mTercero.setText("C");
+        mTercero.setText("A");
+        mPrimero.setText("B");
+        mSegundo.setText("C");
 
 
         //encuentra_numero_text = findViewById(R.id.encuentra_numero_text);
@@ -215,7 +214,7 @@ public class LongitudLapizFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = Integer.parseInt("1");
+                valorSeleccionado = Integer.parseInt("3");
                 seleccion = true;
                 mPrimeroR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -235,7 +234,7 @@ public class LongitudLapizFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = Integer.parseInt("3");
+                valorSeleccionado = Integer.parseInt("1");
                 seleccion = true;
                 mTerceroR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -250,7 +249,7 @@ public class LongitudLapizFragment extends Fragment {
                     //Toast.makeText(BuscarNumeroActivity.this,"Por favor seleccione una opcción.",Toast.LENGTH_LONG).show();
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
-                    if(valorSeleccionado == numeroAleatorioPrincipal){
+                    if(valorSeleccionado == 1){
                         //Toast.makeText(BuscarNumeroActivity.this,"Seleccionó "+valorSeleccionado,Toast.LENGTH_SHORT).show();
                         showSnackBar(calificacionOk);
                       //  subirNota(valorSeleccionado, true);

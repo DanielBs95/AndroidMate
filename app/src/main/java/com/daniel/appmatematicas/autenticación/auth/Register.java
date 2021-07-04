@@ -22,6 +22,7 @@ import com.daniel.appmatematicas.R;
 import com.daniel.appmatematicas.ValidarEmail;
 import com.daniel.appmatematicas.rest.ReporteApiService;
 import com.daniel.appmatematicas.rest.UsuarioResponse;
+import com.daniel.appmatematicas.util.Constante;
 import com.daniel.appmatematicas.view.fragmentos.EncontrarFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -78,8 +79,11 @@ public class Register extends AppCompatActivity {
     }
 
     private void initRetrofit() {
+
+        String ipConfig = Constante.ip_config_;
+
         retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(ipConfig)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

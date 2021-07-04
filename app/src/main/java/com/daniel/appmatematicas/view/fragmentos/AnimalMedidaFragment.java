@@ -238,7 +238,7 @@ public class AnimalMedidaFragment extends Fragment {
                     if(valorSeleccionado == 10){
                         //Toast.makeText(BuscarNumeroActivity.this,"Seleccionó "+valorSeleccionado,Toast.LENGTH_SHORT).show();
                         showSnackBar(calificacionOk);
-                        subirNota(valorSeleccionado, true);
+                        //subirNota(valorSeleccionado, true);
 
                         //startActivity(new Intent(getActivity(), PerfilActivity.class));
                         // listaCalificacion.add(true);

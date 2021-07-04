@@ -77,7 +77,7 @@ public class ColorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.numeros_colores, container, false);
+        View root = inflater.inflate(R.layout.numeros_colores_, container, false);
         initConnect(root);
         initTemas(root);
         ImageView btnCerrar;
@@ -183,10 +183,10 @@ public class ColorFragment extends Fragment {
 
 
         mPrimero.setText(generados.get(0).toString());
-        mSegundo.setText("15");
+        mSegundo.setText(generados.get(1).toString());
         mTercero.setText(generados.get(2).toString());
         mCuarto.setText(generados.get(3).toString());
-        mQuinto.setText(generados.get(4).toString());
+        mQuinto.setText("14");
 
         //encuentra_numero_text = findViewById(R.id.encuentra_numero_text);
         //encuentra_numero_text.setText("Encuentra el número "+ this.numeroAleatorioPrincipal +":");
@@ -275,7 +275,7 @@ public class ColorFragment extends Fragment {
                     //Toast.makeText(BuscarNumeroActivity.this,"Por favor seleccione una opcción.",Toast.LENGTH_LONG).show();
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
-                    if(valorSeleccionado == numeroAleatorioPrincipal){
+                    if(valorSeleccionado == 14){
                         //subirNota(valorSeleccionado, true);
                         prefs.edit().putString("modulo_5", resultadoList+",1").commit();
                     }else{

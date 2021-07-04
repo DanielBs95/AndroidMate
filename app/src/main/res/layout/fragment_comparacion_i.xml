@@ -11,18 +11,24 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:gravity="center"
+
         android:layout_height="wrap_content"
-        android:textColor="#D81313"
+
         android:textSize="18dp"
+
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textColor="#255CE6"
+        android:textStyle="bold"
+
         android:text="Coloca  los números sobre el recuadro de acuerdo al signo de comparación."/>
 
 
@@ -30,15 +36,25 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:textSize="20dp"
-        android:text="97 -------------------- 83"/>
+        android:text="72 -------------------- 98"
+
+
+
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+
+        />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="150dp"
+
         android:weightSum="3"
         android:padding="30dp"
         android:orientation="horizontal">
@@ -53,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text=">"
+            android:text="&gt;"
             android:gravity="center"
             android:textSize="50dp"/>
 

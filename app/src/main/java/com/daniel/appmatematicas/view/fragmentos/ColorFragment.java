@@ -81,9 +81,10 @@ public class ColorFragment extends Fragment {
         View root = inflater.inflate(R.layout.numeros_colores, container, false);
         initConnect(root);
         initTemas(root);
+
         ImageView btnCerrar;
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
-        resultadoList = prefs.getString("modulo_4","");
+        resultadoList = prefs.getString("modulo_1","");
 
         btnCerrar = root.findViewById(R.id.cerrar);
         btnCerrar.setOnClickListener(new View.OnClickListener() {
@@ -277,11 +278,9 @@ public class ColorFragment extends Fragment {
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
                     if(valorSeleccionado == numeroAleatorioPrincipal){
-                        subirNota(valorSeleccionado, true);
-                        prefs.edit().putString("modulo_5", resultadoList+",1").commit();
+                        prefs.edit().putString("modulo_1", resultadoList+",1").commit();
                     }else{
-                        subirNota(valorSeleccionado, false);
-                        prefs.edit().putString("modulo_5", resultadoList+",0").commit();
+                        prefs.edit().putString("modulo_1", resultadoList+",0").commit();
                     }
                     Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_contar);
                 }
@@ -305,7 +304,6 @@ public class ColorFragment extends Fragment {
             public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                 if(response.isSuccessful()) {
-                    showSnackBar(response.body().toString());
 
                     System.out.println("--------------------" );
                     System.out.println("---: " +  response.body().getNombre() );
@@ -324,7 +322,7 @@ public class ColorFragment extends Fragment {
     }
 
     public void showSnackBar(String msg) {
-        Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
+      //  Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
     }
 
 }

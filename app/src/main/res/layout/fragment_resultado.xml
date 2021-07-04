@@ -7,17 +7,20 @@
     tools:context=".view.resultado.ResultadoFragment">
     <ImageView
         android:id="@+id/cerrar"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
         android:background="@drawable/com_facebook_close"/>
     <TextView
+        android:id="@+id/resultado_textual"
         android:layout_marginTop="140dp"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textColor="#35B342"
-        android:textSize="25dp"
-        android:text="ERES INCREIBLE, LOGRASTE" />
+        android:textSize="35dp"
+        android:text="Eres increíble.\n¡Lo lograste!" />
 
 
     <TextView
@@ -34,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:visibility="gone"
         android:textColor="#35B342"
         android:textSize="25dp"
         android:text="ERES INCREIBLE, LOGRASTE" />

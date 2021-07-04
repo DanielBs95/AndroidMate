@@ -268,13 +268,13 @@ public class ContarAlimentosFragment extends Fragment {
                 }else{
                     if(valorSeleccionado == numeroAleatorioPrincipal){
 
-                        showSnackBar(calificacionOk);
-                        subirNota(valorSeleccionado, true);
+                       // showSnackBar(calificacionOk);
+                        //subirNota(valorSeleccionado, true);
 
                     }else{
 
-                        showSnackBar(calificacionNoOk);
-                        subirNota(valorSeleccionado, true);
+                        //showSnackBar(calificacionNoOk);
+                      //  subirNota(valorSeleccionado, true);
 
                     }
 

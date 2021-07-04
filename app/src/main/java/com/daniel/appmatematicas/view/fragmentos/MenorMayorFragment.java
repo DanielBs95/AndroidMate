@@ -61,7 +61,7 @@ public class MenorMayorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_menor_mayor, container, false);
+        View root = inflater.inflate(R.layout.fragment_menor_mayor_i, container, false);
 
 
         primero_ = root.findViewById(R.id.primero_);
@@ -81,7 +81,7 @@ public class MenorMayorFragment extends Fragment {
         btnCerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_p);
+                Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_encontrar);
             }
         });
         return root;
@@ -189,12 +189,12 @@ public class MenorMayorFragment extends Fragment {
                 String e = quinto_.getText().toString();
                 String f = sexto_.getText().toString();
                 Boolean validador = false;
-                if (a.equalsIgnoreCase("29")) {
-                    if (b.equalsIgnoreCase("40")) {
-                        if (c.equalsIgnoreCase("41")) {
-                            if (d.equalsIgnoreCase("50")) {
-                                if (e.equalsIgnoreCase("65")) {
-                                    if (f.equalsIgnoreCase("87")) {
+                if (a.equalsIgnoreCase("30")) {
+                    if (b.equalsIgnoreCase("42")) {
+                        if (c.equalsIgnoreCase("47")) {
+                            if (d.equalsIgnoreCase("53")) {
+                                if (e.equalsIgnoreCase("62")) {
+                                    if (f.equalsIgnoreCase("93")) {
                                         validador = true;
                                     }
                                 }
@@ -219,7 +219,7 @@ public class MenorMayorFragment extends Fragment {
     }
 
     public void showSnackBar(String msg) {
-        Toast.makeText(getActivity(), "" + msg, Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getActivity(), "" + msg, Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -20,7 +20,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.daniel.appmatematicas.MenuActivity;
 import com.daniel.appmatematicas.R;
 import com.daniel.appmatematicas.ValidarEmail;
+import com.daniel.appmatematicas.rest.ReporteApiService;
+import com.daniel.appmatematicas.rest.UsuarioResponse;
+import com.daniel.appmatematicas.util.Constante;
 import com.daniel.appmatematicas.view.EncuentraNumeroActivity;
+import com.daniel.appmatematicas.view.fragmentos.EncontrarFragment;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -42,6 +46,12 @@ import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AccessRelato extends AppCompatActivity {
 
@@ -82,10 +92,16 @@ public class AccessRelato extends AppCompatActivity {
 
     private SharedPreferences prefs_notificacion = null;
 
+
+    private Retrofit retrofit = null;
+    private ReporteApiService reporteApiService;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_access_relato);
+        initRetrofit();
          initView();
         initViewFaceGoog();
     }
@@ -95,7 +111,50 @@ public class AccessRelato extends AppCompatActivity {
         googleInit();
     }
 
+
+
+    private void registrarUsuario(UsuarioResponse obj) {
+        reporteApiService.saveNota(obj).enqueue(new Callback<UsuarioResponse>() {
+            @Override
+            public void onResponse(Call<UsuarioResponse> call, Response<UsuarioResponse> response) {
+
+                if(response.isSuccessful()) {
+                    showSnackBar(response.body().toString());
+                    //   Log.i(TAG, "ResponseValdemar" + response.body().toString());
+
+                    System.out.println("--------------------" );
+                    System.out.println("--------------------" );
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UsuarioResponse> call, Throwable t) {
+                Log.e(TAG, "Error");
+
+            }
+
+        });
+    }
+
+
+    private void initRetrofit() {
+
+        String ipConfig = Constante.ip_config_;
+
+        retrofit = new Retrofit.Builder()
+                .baseUrl(ipConfig)
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        reporteApiService = retrofit.create(ReporteApiService.class);
+    }
+
     private void googleInit() {
+
+
+
+
         mAccessRelatoGoogle = (FrameLayout) findViewById(R.id.accessRelatoGoogle);
         //-------------------GOOGLE-----------------------//
         // Configure Google Sign In
@@ -357,6 +416,12 @@ public class AccessRelato extends AppCompatActivity {
             String email = user.getEmail();
             String email2 = user.getEmail();
 
+
+            UsuarioResponse obj = new UsuarioResponse(user.getDisplayName(),"Masculino",email, "--------");
+
+            registrarUsuario(obj);
+
+
         }
 
         mProgress.dismiss();
@@ -370,6 +435,10 @@ public class AccessRelato extends AppCompatActivity {
         prefs_notificacion = getSharedPreferences("com.valdemar.spook.notificacion", MODE_PRIVATE);
 
         prefs_notificacion.edit().putBoolean("prefs_notificacion", true).commit();
+
+
+
+
 
 
     }

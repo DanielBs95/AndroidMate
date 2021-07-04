@@ -11,88 +11,26 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:textColor="#D81313"
         android:textSize="18dp"
-        android:text="Eligue el signo de comparación correcto"/>
+
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#255CE6"
+        android:textStyle="bold"
+
+        android:text="De acuerdo  a esta comparación, elige la opción correcta"/>
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="3"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal">
 
-        <RelativeLayout
-            android:id="@+id/seleccion_primero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/primero"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:textColor="@color/black"
-                android:text="&gt;"
-                android:gravity="center"
-                android:padding="10dp"
-                android:background="@drawable/circle_transparente"
-                android:textSize="60dp"/>
-
-        </RelativeLayout>
-        <RelativeLayout
-            android:id="@+id/seleccion_segundo"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/segundo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:textColor="@color/black"
-                android:text="&lt;"
-                android:gravity="center"
-                android:padding="10dp"
-                android:background="@drawable/circle_transparente"
-                android:textSize="60dp"/>
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/seleccion_tercero"
-            android:layout_weight="1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center">
-            <TextView
-                android:id="@+id/tercero"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:text="="
-                android:padding="10dp"
-                android:background="@drawable/circle_transparente"
-                android:textSize="60dp"/>
-
-        </RelativeLayout>
-
-
-
-    </LinearLayout>
 
 
 
@@ -107,14 +45,14 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="300"
+            android:text="92"
             android:textSize="30dp"
             android:gravity="center"
             android:layout_weight="1"/>
 
 
         <EditText
-            android:text="250"
+            android:text="105"
             android:gravity="center"
             android:textSize="30dp"
             android:layout_width="wrap_content"
@@ -123,6 +61,71 @@
 
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/seleccion_primero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/primero"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:text="92 es mayor que 105"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/seleccion_segundo"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/segundo"
+                android:layout_width="300dp"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:text="105 es mayor que 92"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/seleccion_tercero"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tercero"
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="105 es menor que 92"
+                android:padding="10dp"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/validar"
         android:layout_width="match_parent"

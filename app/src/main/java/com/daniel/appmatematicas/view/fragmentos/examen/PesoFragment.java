@@ -71,7 +71,7 @@ public class PesoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_peso, container, false);
+        View root = inflater.inflate(R.layout.fragment_peso_i, container, false);
         ImageView btnCerrar;
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);

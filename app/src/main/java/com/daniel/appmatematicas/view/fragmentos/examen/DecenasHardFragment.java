@@ -57,7 +57,7 @@ public class DecenasHardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_decenas_hard, container, false);
+        View root = inflater.inflate(R.layout.fragment_decenas_hard_i, container, false);
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
 
@@ -156,7 +156,7 @@ public class DecenasHardFragment extends Fragment {
                 valorDos = Integer.parseInt(mSegundo.getText().toString());
                 if(valorUno != 0){
                     if(valorUno != 0){
-                        if(valorUno == 6 && valorDos == 2){
+                        if(valorUno == 2 && valorDos == 9){
 
                             // subirNota("Decenas: "+valorUno+ " y " + valorDos +" unidades", true);
                             prefs.edit().putString("modulo_5", resultadoList+",1").commit();

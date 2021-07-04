@@ -86,6 +86,7 @@ public class EncontrarFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_encontrar, container, false);
         initConnect(root);
         initTemas(root);
+
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
         resultadoList = prefs.getString("modulo_1","");
         ImageView btnCerrar;
@@ -136,6 +137,7 @@ public class EncontrarFragment extends Fragment {
 
             }
         });
+
     }
 
     private void initConnect(View root) {
@@ -300,7 +302,6 @@ public class EncontrarFragment extends Fragment {
                         prefs.edit().putString("modulo_1", resultadoList+",1").commit();
                        // startActivity(new Intent(getActivity(), ColorActivity.class));
                         // listaCalificacion.add(true);
-                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_color_polos);
                     }else{
                         //Toast.makeText(BuscarNumeroActivity.this,"Incorrecto "+valorSeleccionado,Toast.LENGTH_SHORT).show();
                         //subirNota(valorSeleccionado, false);
@@ -308,8 +309,9 @@ public class EncontrarFragment extends Fragment {
 
                         showSnackBar(calificacionNoOk);
                         //listaCalificacion.add(false);
-                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_color_polos);
                     }
+                    Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_color_polos);
+
 
                    /* contador = findViewById(R.id.contador);
                     int contador_ = Integer.parseInt(contador.getText().toString());
@@ -343,7 +345,6 @@ public class EncontrarFragment extends Fragment {
                         public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                             if(response.isSuccessful()) {
-                                showSnackBar(response.body().toString());
                                 Log.i(TAG, "---" + response.body().toString());
 
                                 System.out.println("--------------------" );

@@ -36,7 +36,7 @@ public class ComparacionesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_comparaciones, container, false);
+        View root = inflater.inflate(R.layout.fragment_comparaciones_i, container, false);
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
 
         initView(root);

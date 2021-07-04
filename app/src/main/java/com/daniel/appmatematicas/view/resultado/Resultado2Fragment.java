@@ -36,6 +36,8 @@ public class Resultado2Fragment extends Fragment {
     private SharedPreferences prefs = null;
     private String resultadoList;
     private TextView resultado;
+    TextView resultado_textual;
+
     public Resultado2Fragment() {
         // Required empty public constructor
     }
@@ -54,6 +56,8 @@ public class Resultado2Fragment extends Fragment {
 
        // Toast.makeText(getActivity(),"----"+resultadoList,Toast.LENGTH_LONG).show();
         resultado = root.findViewById(R.id.resultado);
+        resultado_textual = root.findViewById(R.id.resultado_textual);
+
         initNota(notas,8);
         btnCerrar = root.findViewById(R.id.cerrar);
 
@@ -97,8 +101,18 @@ public class Resultado2Fragment extends Fragment {
             }
 
         }
+
+        if(cantidad/2 < buenas.size()){
+            resultado_textual.setText("Eres increíble.\n¡Lo lograste!");
+
+
+        }else{
+            resultado_textual.setText("Vamos tú puedes,\nintenta una vez más");
+
+        }
+
         resultado.setText(buenas.size()+"/"+cantidad);
-        subirNota(buenas.size(), cantidad);
+       // subirNota(buenas.size(), cantidad);
         prefs.edit().remove("modulo_2").commit();
 
 

@@ -38,7 +38,7 @@ public class EstimacionLibrosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_estimacion_libros, container, false);
+        View root = inflater.inflate(R.layout.fragment_estimacion_libros_i, container, false);
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
         resultadoList = prefs.getString("modulo_5","");
@@ -76,7 +76,7 @@ public class EstimacionLibrosFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = Integer.parseInt("30");
+                valorSeleccionado = Integer.parseInt("20");
                 seleccion = true;
                 mPrimeroR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
                 System.out.println("30");
@@ -86,7 +86,7 @@ public class EstimacionLibrosFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = Integer.parseInt("41");
+                valorSeleccionado = Integer.parseInt("21");
                 seleccion = true;
                 mSegundoR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -101,7 +101,7 @@ public class EstimacionLibrosFragment extends Fragment {
                     //Toast.makeText(BuscarNumeroActivity.this,"Por favor seleccione una opcción.",Toast.LENGTH_LONG).show();
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
-                    if(valorSeleccionado < 40){
+                    if(valorSeleccionado > 20){
                         prefs.edit().putString("modulo_5", resultadoList+",1").commit();
                     }else {
                         prefs.edit().putString("modulo_5", resultadoList + ",0").commit();

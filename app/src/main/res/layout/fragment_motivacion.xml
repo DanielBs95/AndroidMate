@@ -10,8 +10,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
 
@@ -19,9 +19,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        android:layout_marginTop="30dp"
+
         android:gravity="center"
-        android:textSize="18dp"
+
+
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#255CE6"
+        android:textStyle="bold"
+
+
         android:text="¿Qué tan motivado se siente hacia el aprendizaje sobre la resolución de problemas de cantidad con la aplicación móvil MatPrim?"/>
 
     <LinearLayout

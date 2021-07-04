@@ -12,8 +12,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -48,7 +48,11 @@
                 android:text="Completa la expresión númerica"
                 android:textSize="17dp"
                 android:layout_gravity="center"
-                android:textColor="#849095"
+
+
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 />
 
 
@@ -58,18 +62,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#2241DA"
-                android:text="Nicolas tiene 60 peras, le regala 30 peras a Valentina y Nina le regala 10 manzanas a Nicolas."
+
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
+
+
+                android:text="Daniel tiene 70 fresas, le regala 25 fresas a Alexia y Sofia le regala 5 fresas a Daniel."
                 />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:textColor="#DA2222"
-                android:text="¿Con cuántas manzanas se quedó Valentina?"
+
+                android:text="¿Con cuántas fresas se quedó Daniel?"
+
+
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
+
                 />
 
             <LinearLayout

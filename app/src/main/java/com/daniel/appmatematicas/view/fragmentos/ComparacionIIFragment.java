@@ -45,7 +45,7 @@ public class ComparacionIIFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.fragment_comparacion_i_i, container, false);
+        View root = inflater.inflate(R.layout.fragment_comparacion_i_i_, container, false);
         ImageView btnCerrar;
 
 
@@ -88,7 +88,7 @@ public class ComparacionIIFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = "&gt;";
+                valorSeleccionado = "71 es mayor que 69";
                 seleccion = true;
                 mPrimeroR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -98,7 +98,7 @@ public class ComparacionIIFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = "&lt;";
+                valorSeleccionado = "69 es mayor que 71";
                 seleccion = true;
                 mSegundoR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -108,7 +108,7 @@ public class ComparacionIIFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 initSeleccionEmpty(root);
-                valorSeleccionado = "=";
+                valorSeleccionado = "71 es menor que 69";
                 seleccion = true;
                 mTerceroR.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.gray));
 
@@ -123,7 +123,7 @@ public class ComparacionIIFragment extends Fragment {
                     //Toast.makeText(BuscarNumeroActivity.this,"Por favor seleccione una opcción.",Toast.LENGTH_LONG).show();
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
-                    if(valorSeleccionado.equalsIgnoreCase(">")){
+                    if(valorSeleccionado.equalsIgnoreCase("71 es mayor que 69")){
                         prefs.edit().putString("modulo_2", resultadoList+",1").commit();
                     }else{
                         prefs.edit().putString("modulo_2", resultadoList+",0").commit();

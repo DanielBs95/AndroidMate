@@ -35,7 +35,7 @@ public class ComparacionIFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment+
-        View root = inflater.inflate(R.layout.fragment_comparacion_i, container, false);
+        View root = inflater.inflate(R.layout.fragment_comparacion_i_, container, false);
         ImageView btnCerrar;
         btnCerrar = root.findViewById(R.id.cerrar);
         btnCerrar.setOnClickListener(new View.OnClickListener() {

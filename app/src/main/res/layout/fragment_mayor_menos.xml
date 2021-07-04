@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -32,8 +32,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Aprendiendo Número"
-                android:textSize="28dp"
+                android:text="Aprendiendo Números"
+                android:textSize="26dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
                 />
@@ -43,9 +43,12 @@
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
                 android:text="Ordena los números de mayor a menor"
-                android:textSize="17dp"
+                android:textSize="19dp"
                 android:layout_gravity="center"
-                android:textColor="#849095"
+
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
 
             <TextView
@@ -188,7 +191,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="41"
+                        android:text="80"
                         android:background="@drawable/circle"
 
                         android:textSize="25dp"/>
@@ -222,7 +225,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:background="@drawable/circle"
-                        android:text="29"
+                        android:text="70"
                         android:textSize="25dp"/>
 
                 </RelativeLayout>
@@ -290,7 +293,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="40"
+                        android:text="60"
                         android:background="@drawable/circle"
 
                         android:textSize="25dp"/>
@@ -407,7 +410,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/Widget.MaterialComponents.CircularProgressIndicator"
-                        android:text="65"
+                        android:text="40"
                         android:textSize="25dp"/>
 
                 </RelativeLayout>

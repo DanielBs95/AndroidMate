@@ -71,7 +71,7 @@ public class MayorMenosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root =  inflater.inflate(R.layout.fragment_mayor_menos, container, false);
+        View root =  inflater.inflate(R.layout.fragment_mayor_menos_i, container, false);
 
 
         primero_ = root.findViewById(R.id.primero_);
@@ -226,7 +226,7 @@ public class MayorMenosFragment extends Fragment {
 
     }
     public void showSnackBar(String msg) {
-        Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
     }
 
 }

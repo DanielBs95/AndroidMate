@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Estimación"
+                android:text="Estimando cantidades"
                 android:textSize="28dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
@@ -42,10 +42,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
-                android:text="Estimando cantidades"
-                android:textSize="17dp"
+                android:text=""
+                android:visibility="gone"
                 android:layout_gravity="center"
-                android:textColor="#849095"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
 
 
@@ -56,16 +59,19 @@
                 android:id="@+id/pregunta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:layout_marginTop="15dp"
                 android:text="Estima la cantidad de huevos que hay y completa:"
+
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
 
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="150dp"
                 android:weightSum="6"
                 android:layout_marginTop="35dp"
                 android:layout_gravity="center"
@@ -96,8 +102,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Yo estimo que hay..."
-                        android:textColor="@color/black"
-                        android:textSize="17dp" />
+
+                        android:textSize="20dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#255CE6"
+                        android:textStyle="bold"
+
+                     />
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -165,6 +176,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:weightSum="2"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -179,7 +191,7 @@
                         android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:textColor="@color/black"
-                        android:text="Más de 35"
+                        android:text="Más de 40"
                         android:padding="10dp"
                         android:gravity="center"
                         android:background="@drawable/circle_transparente"
@@ -198,7 +210,7 @@
                         android:layout_width="300dp"
                         android:layout_height="50dp"
                         android:textColor="@color/black"
-                        android:text="Menos de 45"
+                        android:text="Menos de 40"
                         android:gravity="center"
                         android:padding="10dp"
                         android:background="@drawable/circle_transparente"

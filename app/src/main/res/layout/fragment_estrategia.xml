@@ -9,8 +9,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -37,9 +37,13 @@
                 android:id="@+id/pregunta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:layout_marginTop="15dp"
-                android:text="David ha pescado 60 peces anchovechas y 40 peces pejerrey. ¿Cuantos peces ha pescado en total?"
+
+                android:text="David ha pescado 78 peces corvina y 12 peces caballa. ¿Cuántos  peces ha pescado en total?"
+
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,7 +67,8 @@
             <EditText
                 android:layout_weight="1"
                 android:id="@+id/primero"
-                android:text="60"
+                android:text="78"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
@@ -78,16 +83,9 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:padding="10dp"
-                    android:background="@drawable/circle_transparente"
                     android:textSize="25dp"/>
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="40dp"
-                android:gravity="center"
-                android:text="+"/>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -99,9 +97,15 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:padding="10dp"
-                    android:background="@drawable/circle_transparente"
                     android:textSize="25dp"/>
             </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:text="+"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -121,9 +125,10 @@
             android:weightSum="5"
             >
             <EditText
-                android:text="40"
+                android:text="12"
                 android:layout_weight="1"
                 android:id="@+id/tercero"
+                android:gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 />
@@ -138,16 +143,9 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:padding="10dp"
-                    android:background="@drawable/circle_transparente"
                     android:textSize="25dp"/>
             </RelativeLayout>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="40dp"
-                android:gravity="center"
-                android:text="+"/>
+
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -159,9 +157,16 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:padding="10dp"
-                    android:background="@drawable/circle_transparente"
                     android:textSize="25dp"/>
             </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="40dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="+"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -175,6 +180,12 @@
         </LinearLayout>
 
 
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/black" />
 
         <LinearLayout
             android:layout_margin="10dp"
@@ -183,11 +194,6 @@
             android:orientation="horizontal"
             android:weightSum="5"
             >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text=""/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -204,8 +210,25 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:padding="10dp"
-                    android:background="@drawable/circle_transparente"
+                    android:layout_marginLeft="30dp"
                     android:textSize="25dp"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+                <EditText
+                    android:id="@+id/resultado2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="25dp"/>
+
+
             </RelativeLayout>
 
             <TextView

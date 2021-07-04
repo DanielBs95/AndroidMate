@@ -78,7 +78,7 @@ public class ContarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root = inflater.inflate(R.layout.contar, container, false);
+        View root = inflater.inflate(R.layout.contar_i, container, false);
         ImageView btnCerrar;
 
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
@@ -104,7 +104,7 @@ public class ContarFragment extends Fragment {
         String ipConfig = Constante.ip_config_;
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(ipConfig+":8080/")
+                .baseUrl(ipConfig)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -189,8 +189,8 @@ public class ContarFragment extends Fragment {
 
 
         mPrimero.setText(generados.get(0).toString());
-        mSegundo.setText("15");
-        mTercero.setText(generados.get(2).toString());
+        mSegundo.setText(generados.get(2).toString());
+        mTercero.setText("14");
         mCuarto.setText(generados.get(3).toString());
         mQuinto.setText(generados.get(4).toString());
 
@@ -282,7 +282,7 @@ public class ContarFragment extends Fragment {
                     //Toast.makeText(BuscarNumeroActivity.this,"Por favor seleccione una opcción.",Toast.LENGTH_LONG).show();
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
-                    if(valorSeleccionado == numeroAleatorioPrincipal){
+                    if(valorSeleccionado == 14){
                         //Toast.makeText(BuscarNumeroActivity.this,"Seleccionó "+valorSeleccionado,Toast.LENGTH_SHORT).show();
                         //subirNota(valorSeleccionado, true);
                         prefs.edit().putString("modulo_5", resultadoList+",1").commit();
@@ -319,7 +319,6 @@ public class ContarFragment extends Fragment {
             public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                 if(response.isSuccessful()) {
-                    showSnackBar(response.body().toString());
 
                     System.out.println("--------------------" );
                     System.out.println("---: " +  response.body().getNombre() );

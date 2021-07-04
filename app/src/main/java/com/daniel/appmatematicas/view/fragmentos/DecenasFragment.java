@@ -64,7 +64,7 @@ public class DecenasFragment extends Fragment {
         prefs = getActivity().getSharedPreferences("com.valdemar.appcognitivo", MODE_PRIVATE);
 
         resultadoList = prefs.getString("modulo_1","");
-        initConnect(root);
+        //initConnect(root);
         ImageView btnCerrar;
         btnCerrar = root.findViewById(R.id.cerrar);
         btnCerrar.setOnClickListener(new View.OnClickListener() {
@@ -73,12 +73,41 @@ public class DecenasFragment extends Fragment {
                 Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_home);
             }
         });
-        initTemas(root);
+        //initTemas(root);
         mPrimero = root.findViewById(R.id.primero);
         mSegundo = root.findViewById(R.id.segundo);
         valorDos = 0;
         valorDos = 0;
+        Button validar = root.findViewById(R.id.validar);
+        validar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                valorUno = Integer.parseInt(mPrimero.getText().toString());
+                valorDos = Integer.parseInt(mSegundo.getText().toString());
+                if(valorUno != 0){
+                    if(valorUno != 0){
+                        if(valorUno == 6 && valorDos == 2){
 
+                            showSnackBar(calificacionOk);
+                            // subirNota("Decenas: "+valorUno+ " y " + valorDos +" unidades", true);
+                            prefs.edit().putString("modulo_1", resultadoList+",1").commit();
+
+                        }else{
+                            showSnackBar(calificacionNoOk);
+                            //subirNota("Decenas: "+valorUno+ " y " + valorDos +" unidades", false);
+                            prefs.edit().putString("modulo_1", resultadoList+",0").commit();
+                        }
+
+                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_decenas_hard);
+
+                    }else{
+                        showSnackBar("Escriba una respuesta válida");
+                    }
+                }else {
+                    showSnackBar("Escriba una respuesta válida");
+                }
+            }
+        });
 
 
         return root;
@@ -118,9 +147,9 @@ public class DecenasFragment extends Fragment {
                             if(valorUno != 0){
                                 if(valorUno != 0){
                                     if(valorUno == 6 && valorDos == 2){
-                                        prefs.edit().putString("modulo_5", resultadoList+",1").commit();
+                                        prefs.edit().putString("modulo_1", resultadoList+",1").commit();
                                     }else{
-                                        prefs.edit().putString("modulo_5", resultadoList+",0").commit();
+                                        prefs.edit().putString("modulo_1", resultadoList+",0").commit();
                                     }
                                     Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_decenas_hard);
 
@@ -162,7 +191,7 @@ public class DecenasFragment extends Fragment {
                             prefs.edit().putString("modulo_1", resultadoList+",0").commit();
                         }
 
-                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_g);
+                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_decenas_hard);
 
                     }else{
                         showSnackBar("Escriba una respuesta válida");
@@ -201,7 +230,6 @@ public class DecenasFragment extends Fragment {
             public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                 if(response.isSuccessful()) {
-                    showSnackBar(response.body().toString());
 
                     System.out.println("--------------------" );
                     System.out.println("---: " +  response.body().getNombre() );
@@ -221,7 +249,7 @@ public class DecenasFragment extends Fragment {
 
 
     public void showSnackBar(String msg) {
-        Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
+     //   Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
     }
 
 }

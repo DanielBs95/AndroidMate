@@ -104,10 +104,10 @@ public class EstimacionLibrosFragment extends Fragment {
                     showSnackBar("¡Por favor seleccione una opcción valida!");
                 }else{
                     if(valorSeleccionado < 40){
-                        prefs.edit().putString("modulo_5", resultadoList+",1").commit();
+                        prefs.edit().putString("modulo_3", resultadoList+",1").commit();
                         Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_estimacion_estrategia);
                     }else {
-                        prefs.edit().putString("modulo_5", resultadoList + ",0").commit();
+                        prefs.edit().putString("modulo_3", resultadoList + ",0").commit();
                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.nav_estimacion_estrategia);
 
                     }

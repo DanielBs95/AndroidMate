@@ -78,11 +78,11 @@ public class RakingFragment extends Fragment {
         Call<List<Reporte>> call = reporteApiService.getMovie();
 
 
+
         call.enqueue(new Callback<List<Reporte>>() {
             @Override
             public void onResponse(Call<List<Reporte>> call, Response<List<Reporte>> response) {
                 List<Reporte> myList = response.body();
-                showResponse(myList.toString());
                 recyclerAdapter.setMovieList(myList);
 
             }
@@ -98,7 +98,7 @@ public class RakingFragment extends Fragment {
     }
 
     public void showResponse(String response) {
-       Toast.makeText(getActivity(),""+response,Toast.LENGTH_LONG).show();
+       //Toast.makeText(getActivity(),""+response,Toast.LENGTH_LONG).show();
     }
 
 }

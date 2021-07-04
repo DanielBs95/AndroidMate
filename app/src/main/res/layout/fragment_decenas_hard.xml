@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -90,7 +90,7 @@
                         android:textSize="20dp"
                         android:gravity="center"
                         android:textColor="@color/black"
-                        android:text="29 tienen"
+                        android:text="22 tiene"
                         />
                     <EditText
                         android:id="@+id/primero"
@@ -127,7 +127,7 @@
                         android:textSize="20dp"
                         android:gravity="center"
                         android:textColor="@color/black"
-                        android:text="92 tienen"
+                        android:text="96 tiene"
                         />
                     <EditText
                           android:id="@+id/segundo"

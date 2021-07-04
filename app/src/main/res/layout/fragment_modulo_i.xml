@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Repsentando números."
+            android:text="Representando números."
             android:textColor="#255CE6"
             android:textSize="20dp"
             />
@@ -74,7 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="¡Vamos, tu puedes!"
+            android:text="¡Vamos, tú puedes!"
             android:textColor="#5DA118"
             android:textSize="20dp"
             />

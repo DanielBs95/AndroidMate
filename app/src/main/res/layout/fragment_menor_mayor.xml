@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Aprendiendo Número"
+                android:text="Aprendiendo Números"
                 android:textSize="28dp"
                 android:layout_gravity="center"
                 android:textColor="@color/black"
@@ -43,9 +43,14 @@
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
                 android:text="Ordena los números de menor a mayor"
-                android:textSize="17dp"
+
                 android:layout_gravity="center"
-                android:textColor="#849095"
+
+
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
 
             <TextView
@@ -105,7 +110,7 @@
                         android:textColor="@color/white"
                         android:background="@drawable/circle"
 
-                        android:text="93"
+                        android:text="10"
                         android:textSize="25dp"/>
 
                 </RelativeLayout>
@@ -188,7 +193,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="41"
+                        android:text="12"
                         android:background="@drawable/circle"
 
                         android:textSize="25dp"/>
@@ -222,7 +227,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         android:background="@drawable/circle"
-                        android:text="29"
+                        android:text="14"
                         android:textSize="25dp"/>
 
                 </RelativeLayout>
@@ -290,7 +295,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="40"
+                        android:text="20"
                         android:background="@drawable/circle"
 
                         android:textSize="25dp"/>
@@ -323,7 +328,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:text="50"
+                        android:text="22"
                         android:background="@drawable/circle"
 
                         android:textSize="25dp"/>
@@ -407,7 +412,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
                         style="@style/Widget.MaterialComponents.CircularProgressIndicator"
-                        android:text="65"
+                        android:text="35"
                         android:textSize="25dp"/>
 
                 </RelativeLayout>

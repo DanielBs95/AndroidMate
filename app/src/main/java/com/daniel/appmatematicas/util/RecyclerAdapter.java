@@ -39,8 +39,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Myview
 
     @Override
     public void onBindViewHolder(RecyclerAdapter.MyviewHolder holder, int position) {
-        holder.tvMovieName.setText(movieList.get(position).getNombre());
-        holder.tvNota.setText(movieList.get(position).getNota());
+        holder.tvMovieName.setText("Usuario: "+movieList.get(position).getNombre());
+        holder.tvNota.setText("Nota: "+movieList.get(position).getNota());
+
+        String satifaccion[] = movieList.get(position).getNota().split("Satisfacción");
+        String motivacion[] = movieList.get(position).getNota().split("Motivacion:");
+        String nota[] = movieList.get(position).getNota().split("");
+
+        holder.tvMotivacion.setText(satifaccion[0]);
+        holder.tvSatisfaccion.setText(motivacion[0]);
+
     }
 
     @Override
@@ -54,11 +62,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Myview
     public class MyviewHolder extends RecyclerView.ViewHolder {
         TextView tvMovieName;
         TextView tvNota;
+        TextView tvMotivacion;
+        TextView tvSatisfaccion;
 
         public MyviewHolder(View itemView) {
             super(itemView);
             tvMovieName = (TextView)itemView.findViewById(R.id.nombre_resultado);
             tvNota = (TextView)itemView.findViewById(R.id.nota_resultado);
+            tvMotivacion = (TextView)itemView.findViewById(R.id.motivacion_resultado);
+            tvSatisfaccion = (TextView)itemView.findViewById(R.id.satisfaccion_resultado);
         }
     }
 }

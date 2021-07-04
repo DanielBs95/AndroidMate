@@ -278,7 +278,6 @@ public class PesoFragment extends Fragment {
             public void onResponse(Call<ReporteRequest> call, Response<ReporteRequest> response) {
 
                 if(response.isSuccessful()) {
-                    showSnackBar(response.body().toString());
 
                     System.out.println("--------------------" );
                     System.out.println("---: " +  response.body().getNombre() );
@@ -297,6 +296,6 @@ public class PesoFragment extends Fragment {
     }
 
     public void showSnackBar(String msg) {
-        Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
+       // Toast.makeText(getActivity(),""+msg,Toast.LENGTH_SHORT).show();
     }
 }

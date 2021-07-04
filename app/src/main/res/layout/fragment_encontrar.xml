@@ -11,8 +11,8 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/cerrar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/com_facebook_close"/>
     </RelativeLayout>
     <LinearLayout
@@ -29,24 +29,21 @@
             android:paddingRight="20dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Aprendiendo Número"
-                android:textSize="28dp"
-                android:layout_gravity="center"
-                android:textColor="@color/black"
-                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:justificationMode="inter_word"
                 android:text="Aprendiendo números"
-                android:textSize="17dp"
+
+                android:layout_marginTop="10dp"
+
+                android:textStyle="bold"
+
+                android:textSize="28dp"
                 android:layout_gravity="center"
-                android:textColor="#849095"
+                android:textColor="@color/black"
+
                 />
 
 
@@ -57,9 +54,14 @@
                 android:id="@+id/encuentra_numero_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="17dp"
-                android:layout_marginTop="15dp"
+
+
                 android:text=""
+
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#255CE6"
+                android:textStyle="bold"
                 />
 
 

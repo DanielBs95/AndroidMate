@@ -190,11 +190,11 @@ public class MayorMenosFragment extends Fragment {
                 String f =  sexto_.getText().toString();
                 Boolean validador = false;
                 if(a.equalsIgnoreCase("90")){
-                    if(b.equalsIgnoreCase("65")){
-                        if(c.equalsIgnoreCase("50")){
-                            if(d.equalsIgnoreCase("41")){
-                                if(e.equalsIgnoreCase("40")){
-                                    if(f.equalsIgnoreCase("29")){
+                    if(b.equalsIgnoreCase("80")){
+                        if(c.equalsIgnoreCase("70")){
+                            if(d.equalsIgnoreCase("60")){
+                                if(e.equalsIgnoreCase("50")){
+                                    if(f.equalsIgnoreCase("40")){
                                         validador = true;
                                     }
                                 }
